@@ -17,9 +17,7 @@ class MyCart extends Component {
             autoClose:2000
         });
         
-        setTimeout(()=> {
-            this.props.history.push("/");
-        }, 2500);
+       
         
     }
     render() {
