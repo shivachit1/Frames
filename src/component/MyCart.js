@@ -17,16 +17,20 @@ class MyCart extends Component {
             autoClose:2000
         });
         
-       
+        setTimeout(()=> {
+            this.props.history.push("/");
+        }, 2500);
         
     }
     render() {
 
         const cartSize = this.props.frames.length;
         var totalPrice = 0;
-        this.props.frames.map((item) => 
-        totalPrice = totalPrice + parseInt(item.price)
-        );
+        if(cartSize>0){
+            this.props.frames.map((item) => 
+            totalPrice = totalPrice + parseInt(item.price)
+            );
+        }
 
         return (
            
