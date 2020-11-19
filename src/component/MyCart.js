@@ -5,7 +5,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 class MyCart extends Component {
-    
 
     componentDidMount() {
         console.log(this.props);
@@ -26,10 +25,13 @@ class MyCart extends Component {
     render() {
 
         const cartSize = this.props.frames.length;
-        
+        var totalPrice = 0;
+        this.props.frames.map((item) => 
+        totalPrice = totalPrice + parseInt(item.price)
+        );
 
         return (
-
+           
             <div >
                 <ToastContainer />
                 {cartSize > 0 ?
@@ -49,7 +51,7 @@ class MyCart extends Component {
                         </div>
 
                         <div className="footer">
-                            <h3>Total Price : 100€</h3>
+                            <h3>Total Price : {totalPrice}</h3>
                             <button className="button" onClick={()=>this.OrderPlaced()}>Pay</button>
                             
                         </div>
