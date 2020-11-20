@@ -79,8 +79,8 @@ class MyCart extends Component {
 //we used frames as name in combine reducer
 const mapStateToProps = (state) => {
     return {
-        frames: state.frames.cart,
-        orderPlaced:state.frames.orderPlaced
+        frames: state.cart.myCart,
+        orderPlaced:state.cart.orderPlaced
     };
 }
 

@@ -59,8 +59,8 @@ class FrameDetails extends Component {
 
 const mapStateToProps = (state) =>{
     return{
-        showDetails:state.frames.showDetails,
-        frame:state.frames.frame
+        showDetails:state.modal.showDetails,
+        frame:state.modal.frame
     };
     
 }

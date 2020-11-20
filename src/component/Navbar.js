@@ -28,7 +28,7 @@ class Navbar extends Component{
 //we used frames as name in combine reducer
 const mapStateToProps = (state) => {
     return {
-        frames: state.frames.cart
+        frames: state.cart.myCart
     };
 }
 
