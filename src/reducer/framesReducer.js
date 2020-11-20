@@ -4,11 +4,7 @@ import {
 
 const initialState = {
   framesLoaded: false,
-  data: '',
-  showDetails: false,
-  frame: '',
-  cart: [],
-  
+  data: ''
 }
 
 const frameReducer = (state = initialState, action) => {
